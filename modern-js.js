@@ -40,4 +40,8 @@ console.log(heavyBuses);
 const totalPassengers = buses.reduce(
     (total, {passengers}) => total + passengers, 0
 );
+
+const totalPassengerOfHeavyBuses = buses.filter(({passengers}) => passengers > 50).reduce(
+    (total, {passengers}) => total + passengers, 0
+);
 console.log(totalPassengers);
